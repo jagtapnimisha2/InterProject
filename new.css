@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+:root{
+  --color-primary: #7380ec;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgba(132,139,200,0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+  --card-border-radius: 2rem;
+ --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0 2rem 3rem var(--color-light);
+
+}
+
+/*--------------dark theme varaibles*/
+.dark-theme-variables{
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --color-shadow: 0 2rem 3rem var(--color-light);
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+html{
+  font-size: 14px;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins,sans-serif;
+  font-size: 0.88rem;
+  background-color:var(--color-background);
+  user-select: none;
+  overflow-x: hidden;
+  color:var(--color-dark);
+}
+.container{
+  display: grid;
+  width: 96%;
+  max-width: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 23rem;
+
+}
+
+a{
+  color: #363949;
+}
+img{
+  display: block;
+  width: 100%;
+
+}
+h1{
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+h2{
+  font-size: 1.4rem;
+}
+h3{
+  font-size: 0.87rem;
+}
+h4{
+  font-size: 0.8rem;
+}
+h5{
+  font-size: 0.77rem;
+}
+small{
+  font-size: 0.75em;
+}
+.profile-photo{
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.text-muted{
+color: var(--color-info-dark);
+}
+p{
+  color:var(--color-dark-variant);
+}
+b{
+  color:var(--color-dark);
+}
+.primary{
+color:var(--color-primary);
+}
+.danger{
+  color:var(--color-danger);
+}
+.success{
+  color:var(--color-success);
+}
+.warning{
+  color:var(--color-warning);
+}
+
+aside{
+  height: 100vh;
+
+}
+aside .top{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+}
+aside .logo{
+  display: flex;
+  gap: 0.8rem;
+}
+aside .logo img{
+  width: 2rem;
+  height: 2rem;
+}
+aside .close{
+  display: none;
+}
+/*======================sidebar=====================*/
+aside .sidebar{
+  
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  position: relative;
+  top: 3rem;
+
+}
+aside h3{
+  font-weight: 500;
+}
+aside .sidebar a{
+display: flex;
+color:var(--color-info-dark);
+margin-left: 2rem;
+gap: 1rem;
+align-items: center;
+position: relative;
+height: 3.7rem;
+transition: all 300ms ease;
+}
+aside .sidebar a span{
+  font-size: 1.6rem;
+  transition: all 300ms ease;
+}
+aside .sidebar a:last-child{
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
+aside .sidebar a.active{
+  background:var(--color-light);
+  color:var(--color-primary);
+  margin-left: 0;
+}
+aside .sidebar a.active:before{
+  content: '';
+  width: 6px;
+  height: 100%;
+  background:var(--color-primary);
+}
+aside .sidebar a.active span {
+  color: var(--color-primary);
+  margin-left: calc(1rem - 3px);
+}
+
+/*hover color primary*/
+aside .sidebar a:hover{
+  color: var(--color-primary);
+}
+/*all content enimation*/
+aside .sidebar a:hover span{
+  margin-left: 1rem;
+}
+/*msg ke side vala 26 pr design*/
+
+
+/*===============main===============*/
+main{
+  margin-top: 1.4rem;
+}
+
+main .top{
+  display: flex;
+  justify-content: space-between;
+}
+
+main .date{
+  display: inline-block;
+  background: var(--color-light);
+  border-radius: var(--border-radius-1);
+  margin-top: 1rem;
+  padding: 0.5rem 1.6rem;
+}
+main .date input[type="date"]{
+  background: transparent;
+  color: var(--color-dark);
+}
+/*https://fonts.google.com/specimen/Poppins?query=poppins:-font family*/
+/*https://fonts.google.com/icons?icon.style=Sharp&icon.query=analytics:-icons*/
+main .insights{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+main .insights > div{
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+
+}
+main .insights > div:hover{
+  box-shadow: none;
+}
+main .insights > div span{
+  background: var(--color-primary);
+  padding: 0.5rem;
+  border-radius: 50%;/*icon circle*/
+  color: var(--color-white);
+  font-size: 2rem;/*icone size bda ho jayega*/
+}
+
+main .insights > div.expenses span{
+  background: var(--color-danger);/*change icone color bacground*/
+
+}
+
+main .insights > div.income span{
+  background: var(--color-success);/*change icone color bacground*/
+  
+}
+
+main .insights > div .middle{/*circle side me jayega*/
+display: flex;
+align-items: center;
+justify-content: space-between;/*totale sales ke uper space aayega*/
+  
+}
+main .insights h3{
+  margin:1rem 0 0.6rem;
+ font-size: 1rem;
+}
+
+main .insights .progress {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+}
+
+main .insights svg{
+  /*circle ki height with bdhegi kam hogi*/
+  width: 7rem;
+  height: 7rem;
+}
+main .insights svg circle{
+  fill: none;/*circle show nhi hoga*/
+  stroke: var(--color-primary);/*circle ki boder show hogi*/
+stroke-width: 14;/*circle ki width moti ho jayegi*/
+stroke-linecap: round;/*circle round hoga*/
+transform: translate(5px, 5px);
+}
+
+/*diffrent circle sales vala change hoga*/
+main .insights .sales svg circle{
+  stroke-dashoffset: 20;
+  stroke-dasharray: 200;
+}
+
+/*diffrent circle expenses vala change hoga*/
+main .insights .expenses svg circle{
+  stroke-dashoffset: 60;
+  stroke-dasharray: 200;
+}
+
+/*diffrent circle income vala change hoga*/
+main .insights .income svg circle{
+  stroke-dashoffset: 100;
+  stroke-dasharray: 200;
+}
+/*==================positon 81% ki center me===============*/
+main .insights .progress .number{
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+/*last 24 hours bottem me aa jayega*/
+main .insights small{
+  margin-top: 1.3rem;
+  display: block;
+}
+/*=====================recent oder=======================*/
+main .recent-orders{
+  margin-top: 2rem;/*resent oder hading top se niche aa jayegi*/
+}
+
+main .recent-orders h2{
+  margin-bottom: 0.8rem;
+}
+main .recent-orders table{
+  background: var(--color-white);
+  width: 100%;
+  border-radius: var(--card-border-radius);/*box ke corner round ho jayege*/
+  padding: var(--card-padding);/*card ka size bda hho jayega*/
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+main .recent-orders table:hover{
+  box-shadow: none;
+
+}
+main table tbody td{
+  height: 2.8rem;/*sare content ke bich me space aa jayega*/
+  border-bottom: 1px solid var(--color-light);/*sare content ke bich me line show hogi*/
+  color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td {
+  border: none;
+}
+
+main .recent-orders a{
+  text-align: center;
+  display: block;/*show all center me chala jayega*/
+  margin: 1rem auto;
+  color: var(--color-primary);
+}
+/*=============right====================*/
+.right{
+  margin-top: 1.4rem;/*top se niche aa jayega menu icon*/
+
+}
+.right .top{
+  display: flex;
+justify-content: end;
+gap: 2rem;
+
+}
+.right .top button{
+  display: none;
+}
+.right .theme-toggler{
+  background: var(--color-light);
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  height: 1.6rem;
+  width:4.2rem;
+  cursor: pointer;
+  border-radius: var(--border-radius-1);
+  
+
+}
+.right .theme-toggler span{
+  /*sun moom bacorung round*/
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+.right .theme-toggler span.active{
+  /*sun moon ka bacground color change hoga*/
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius-1);
+}
+.right .top .profile{
+  /*top se settind ki sun moon ki*/
+  display: flex;
+  gap: 2rem;
+  text-align: right;
+}
+/*===========recent update=============*/
+.right .recent-updates{
+/*  sara right side ka content recent update se top se 1 rem niche aa jayega*/
+  margin-top: 1rem;
+
+}
+.right .recent-updates h2{
+  /*3 icon se top se niche aa jayega*/
+margin-bottom: 0.8rem;
+}
+.right .recent-updates .updates{
+  /*pura card ka background olor white ho jayega*/
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);/*card circle me hoga thoda*/
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+.right .recent-updates .updates:hover{
+  box-shadow: none;
+}
+.right .recent-updates .updates .update{
+  /*card ke ander ka content me chande hoga*/
+  display: grid;
+  grid-template-columns: 2.6rem auto;/*icon or paragraph ka gap kam hoga*/
+  gap: 1rem;
+  margin-bottom: 1rem;/*sare icons ke niche ka gap bdhega*/
+  
+
+}
+/*================sales analytics=========================*/
+.right .sales-analytics{
+  margin-top: 2rem;/*sales analetic ke top se space aa jayega*/
+}
+.right .sales-analytics h2{
+  margin-bottom: 0.8rem;/*shoping icon ke top se space aa jayega*/
+
+}
+.right .sales-analytics .item{
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  padding: 1.4rem var(--card-padding);/*card hight incress*/
+  border-radius: var(--border-radius-3);/*coner round*/
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+.right .sales-analytics .item:hover{
+  box-shadow: none;
+}
+.right .sales-analytics .item .right{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: 0;
+  width: 100%;/*card ke aek box ka content ke bich space aa jayega*/
+}
+.right .sales-analytics .item .icon{
+  /*icon pr circle aa jayega*/
+  padding: 0.6rem;
+  color: var(--color-white);
+  border-radius: 70%;
+  background-color: var(--color-primary);
+  display: flex;
+}
+.right .sales-analytics .item.offline .icon{
+  background: var(--color-danger);
+}
+.right .sales-analytics .item.customers .icon{
+  background: var(--color-success);
+}
+.right .sales-analytics .add-product{
+  background-color: transparent;
+  border: 2px dashed var(--color-primary);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right .sales-analytics .add-product:hover{
+  /*add product me hover hoga*/
+background: var(--color-primary);
+color: white;
+}
+.right .sales-analytics .add-product div{
+  /*+ or add product aek hi line me aa jayege*/
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.right .sales-analytics .add-product div h3{
+  font-weight: 600;
+}
+
+
+
+
+/*====================responsive:-media queries================*/
+@media screen and (max-width: 1200px){
+  /*body{
+    background: red;
+  }*/
+  .container{
+    width: 94%;/*card or table ki width bdhegi*/
+    grid-template-columns: 7rem auto 23rem;/*overlap hoga card or table*/
+  }
+  aside .logo h2{
+    display: none;/*logo ke side vala name change hoga*/
+  }
+  aside .sidebar h3{
+    display: none;/*icone ke side vala content show nhi hoga */
+  }
+aside .sidebar a{
+  width: 5.6rem;/*customer ke uper blue color ki widh long shot hogi*/
+}
+aside .sidebar a:last-child{
+  position: relative;
+  margin: 1.8rem;/*icone sare equacle ho jayege*/
+}
+main .insights{
+  grid-template-columns: 1fr;
+  gap: 0;/*card or table sare aek hi line me aa gye means colom me aa gye*/
+}
+main .recent-orders{
+  width: 94%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);/*table left side aa jayega*/
+  margin: 2rem 0 0 8.8rem;/*trbl se margin*/
+}
+main .recent-orders table{
+width: 83vw;/*table ki width long hogi*/
+}
+main table thead tr th:last-child
+{
+  display: none;
+
+}
+main table tbody tr td:last-child
+{
+  display: none;
+  
+}
+}
+
+
+
+/* ==============media queries for tablet====================== */
+@media screen and (max-width: 768px){
+  .container{
+    width: 100%;/*card or table ki width bdhegi*/
+    grid-template-columns: 1fr;/*card ki width badh gyi*/
+  }
+  aside{
+    position: fixed;
+    left: -100%;
+    background: var(--color-white);/*side bar bka color change hoga*/
+    width: 18rem;/*card niche chalejayega sidebar ke*/
+    z-index: 3;
+    box-shadow: 1rem 3rem 4rem var(--color-light);/*side bar shadow aayegi*/
+    height: 100vh;
+    padding-right: var(--card-padding);
+    display: none;
+    animation: showMenu 400ms ease forwards;
+  }
+  @keyframes showMenu {
+    to {
+      left: 0;
+
+    }
+  }
+  aside .logo{
+    margin-left: 1rem;
+  }
+  aside .logo h2{
+    display: inline;
+  }
+  aside .sidebar h3{
+  display: inline;  
+  }
+  aside .sidebar a{ 
+   width: 100%;/*customer ke uper jo blue color he uski length badh jayegi*/
+   height: 3.4rem;
+  }
+  aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 5rem;
+  }
+  aside .close{
+    display: inline-block;
+    cursor: pointer;/*1:12*/
+  }
+  main{
+    margin-top: 8rem;
+    padding: 0 1rem;
+  }
+  main .recent-orders{
+    position: relative;
+    margin: 3rem 0 0 0;
+    width: 100%;
+  }
+  main .recent-orders table{
+    width: 100%;
+    margin: 0;
+  }
+  .right{
+    width: 94%;
+    margin: 0 auto 4rem;
+  }
+  .right .top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    padding: 0 0.8rem;
+    height: 4.6rem;
+    background: var(--color-white);
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+    box-shadow: 0 1rem 1rem var(--color-light);
+  }
+  .right .top .theme-toggler{
+    width: 4.4rem;
+    position: absolute;
+    left: 66%;
+  }
+  .right .profile .info{
+    display: none;
+  }
+  .right .top button{
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-dark);/*right side 3 line color change*/
+    position: absolute;/*left side aa jayege 3 line*/
+    left: 1rem;
+    
+  }
+  .right .top button span{
+    font-size: 2rem;/*right side me 3 line ka size*/
+  }
+}
